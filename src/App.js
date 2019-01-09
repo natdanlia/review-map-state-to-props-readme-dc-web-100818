@@ -18,7 +18,7 @@ class App extends Component {
   }
 
   render() {
-    // debugger;
+    debugger;
     return (
       <div className="App">
           <button onClick={() => this.handleOnClickItems()}>
@@ -27,7 +27,9 @@ class App extends Component {
           <button onClick={() => this.handleOnClickUsers()}>
             Click to change user count
           </button>
-          <p>{this.props.items.length}</p>
+
+          <p>{this.props.popo.length}</p>
+
       </div>
     );
   }
@@ -35,7 +37,7 @@ class App extends Component {
 
 const mapStateToProps = (state) => {
   debugger;
-  return { items: state.items }
+  return { popo: state.items }
 }
 
 export default connect(mapStateToProps)(App);
